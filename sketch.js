@@ -43,7 +43,9 @@ function draw() {
     background(rgb(169,169,169));
 
     //creating edgeSprite
-    edges = createEdgeSprites;
+    edges = createEdgeSprites();
+
+    box.bounceOff(edges);
 
     //add condition to check if box touching surface and make it box
     if(surface1.isTouching(box) && box.bounceOff(surface1)) {
